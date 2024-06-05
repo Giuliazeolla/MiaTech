@@ -1,2 +1,3 @@
 # MiaTech
-Questo è il mio progetto di prova 
+
+Questo è il mio primo progetto di prova su git.
