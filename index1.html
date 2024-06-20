@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <nav>
         <article>
-<aside>
-    <h1>Nuovo progetto</h1>
-    <p>Questo nuovo progetto include nuovo tag</p>
-    <a href="https://code.gestiolex.it/html-tag-aside/">Spiegazione del tag aside</a>
-</aside>
+            <aside>
+                <h1>Nuovo progetto</h1>
+                <p>Questo nuovo progetto include nuovo tag</p>
+                <a href="https://code.gestiolex.it/html-tag-aside/">Spiegazione del tag aside</a>
+            </aside>
         </article>
     </nav>
     <main>
         <section>
             <h2>Questa è la prima sezione</h2>
             <p>
-                Le specifiche stabiliscono che section rappresenta una sezione generica 
+                Le specifiche stabiliscono che section rappresenta una sezione generica
                 (non un semplice "contenitore") di un documento o di una Web application, <br>
                 dove per "sezione" si intende uno spazio destinato a delimitare contenuti riferiti ad un tema specifico
             </p>
@@ -32,6 +34,21 @@
                 entrano in gioco altri linguaggi - come CSS, Javascript e tanti altri
             </p>
         </section>
+        <figure>
+            <img alt="Nodo-di-rete"
+             srcset="https://www.it-impresa.it/wp-content/uploads/Nodo-di-rete.jpg 300w,
+                    https://www.it-impresa.it/wp-content/uploads/Nodo-di-rete.jpg 200w,
+                    https://www.it-impresa.it/wp-content/uploads/Nodo-di-rete.jpg 180w" sizes="70vmin">
+            <img alt="Nodo-di-rete"
+            srcset="https://www.it-impresa.it/wp-content/uploads/Nodo-di-rete.jpg 1.5x,
+                    https://www.it-impresa.it/wp-content/uploads/Nodo-di-rete.jpg 2x,
+                    https://www.it-impresa.it/wp-content/uploads/Nodo-di-ree.jpg 3x">
+        </figure>
+        <picture>
+            <source media="(min-width:200px)" srcset="https://haydensanimalfacts.wordpress.com/wp-content/uploads/2015/12/blue-morpho-butterfly.jpg">
+            <source media="(min-width:200px)" srcset="https://upload.wikimedia.org/wikipedia/commons/f/fc/398847-pretty-pink-butterfly_(1).jpg">
+        <img src="https://jooinn.com/images/beautiful-butterfly-6.jpg" alt="Farfalle" style="width: auto;">
+        </picture>
     </main>
     <footer>
         <h6>Questa è la fine</h6>
@@ -40,4 +57,5 @@
         </p>
     </footer>
 </body>
+
 </html>
