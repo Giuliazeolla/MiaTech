@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="/action_page.php" method="get">
         <label for="nome">Nome</label>
         <div>
-            <input type="text" id="nome" name="nome"/>
+            <input type="text" id="nome" name="nome" />
         </div>
         <br>
         <br>
         <fieldset>
             <legend>Seleziona il tuo genere</legend>
             <div>
-                <input type="radio" id="femmina" name="femmina" value="femmina"/>
-                <label for="femmina">Femmina</label> 
+                <input type="radio" id="femmina" name="femmina" value="femmina" />
+                <label for="femmina">Femmina</label>
             </div>
             <div>
-                <input type="radio" id="maschio" name="maschio" value="maschio"/>
-                <label for="maschio">Maschio</label> 
+                <input type="radio" id="maschio" name="maschio" value="maschio" />
+                <label for="maschio">Maschio</label>
             </div>
         </fieldset>
         <fieldset>
             <legend>Accetta le condizioni Privacy & Policy</legend>
             <div>
-                <input type="checkbox" id="privacy & policy" name="privacy & policy"/>
+                <input type="checkbox" id="privacy & policy" name="privacy & policy" />
                 <label for="privacy & policy">Privacy & Policy</label>
             </div>
         </fieldset>
@@ -35,8 +37,14 @@
     <br>
     <br>
     <form action="/action_page.php" method="post">
-<label for="storia">Raccontaci la tua storia</label>
-<textarea id="storia" name="storia" rows="8" cols="35" autocorrect="on">La mia storia parla di...</textarea>
+        <label for="storia">Raccontaci la tua storia</label>
+        <textarea id="storia" name="storia" rows="8" cols="35" autocorrect="on">La mia storia parla di...</textarea>
     </form>
-    </body>
+    <form action="/action_page.php" method="get">
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</body>
+
 </html>
