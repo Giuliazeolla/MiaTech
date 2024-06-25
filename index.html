@@ -11,21 +11,30 @@
     <form action="/action_page.php" method="get">
         <label for="nome">Nome</label>
         <div>
-            <input type="text" id="nome" name="nome" />
+            <input type="text" id="nome" name="nome" required/>
+        </div>
+        <br>
+        <label for="cognome">Cognome</label>
+        <div>
+            <input type="text" id="cognome" name="cognome" required/>
         </div>
         <br>
         <br>
         <fieldset>
             <legend>Seleziona il tuo genere</legend>
             <div>
-                <input type="radio" id="femmina" name="femmina" value="femmina" />
+                <input type="radio" id="femmina" name="femmina" value="femmina" required/>
                 <label for="femmina">Femmina</label>
             </div>
+            <br>
+            <br>
             <div>
-                <input type="radio" id="maschio" name="maschio" value="maschio" />
+                <input type="radio" id="maschio" name="maschio" value="maschio" required/>
                 <label for="maschio">Maschio</label>
             </div>
         </fieldset>
+        <br>
+        <br>
         <fieldset>
             <legend>Accetta le condizioni Privacy & Policy</legend>
             <div>
@@ -40,6 +49,7 @@
         <label for="storia">Raccontaci la tua storia</label>
         <textarea id="storia" name="storia" rows="8" cols="35" autocorrect="on">La mia storia parla di...</textarea>
     </form>
+    <br>
     <form action="/action_page.php" method="get">
         <div>
             <input type="submit" value="Submit"/>
