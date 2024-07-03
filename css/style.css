@@ -3,3 +3,27 @@ p {
     color: blue;
     text-align: right;
 }
+
+h1 {
+    color: aqua;
+}
+
+h2 {
+    color: khaki;
+}
+
+h3 {
+    color: darkblue;
+}
+
+h4 {
+    color: seagreen;
+}
+
+h5 {
+    color: orange;
+}
+
+h6 {
+    color: tomato;
+}
