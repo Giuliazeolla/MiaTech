@@ -8,6 +8,14 @@ p {
     text-align: right;
 }
 
+p.color {
+    color: red;
+}
+
+p.font {
+    font-size: 40px;
+}
+
 h1 {
     color: aqua;
 }
