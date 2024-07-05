@@ -24,6 +24,11 @@ p.font {
     font-size: 40px;
 }
 
+p, h6.color-1 {
+    color: violet;
+    background-color: blue;
+}
+
 h1 {
     color: aqua;
 }
