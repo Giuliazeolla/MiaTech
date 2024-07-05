@@ -53,3 +53,7 @@ h5#title-1 {
 h6 {
     color: tomato;
 }
+
+a:hover {
+    color: orangered;
+}
