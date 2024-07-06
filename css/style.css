@@ -39,6 +39,10 @@ p {
     color: rgba(255, 0, 0, 0.7) ;
    }
 
+   p.red-3 {
+    color: red;
+   }
+
 p.first {
     background-color: beige;
     color: blue;
