@@ -11,6 +11,18 @@ div.first-section {
 }
 
 p {
+    color: red;
+  }
+  
+  p.new {
+    color: blue;
+  }
+  
+  p#port {
+    color: orange;
+  }
+
+p {
     background-color: beige;
     color: blue;
     text-align: right;
