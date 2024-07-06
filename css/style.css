@@ -35,7 +35,11 @@ p {
     color: #3cb371 ;
    }
 
-p {
+   p.red-2 {
+    color: rgba(255, 0, 0, 0.7) ;
+   }
+
+p.first {
     background-color: beige;
     color: blue;
     text-align: right;
