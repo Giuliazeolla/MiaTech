@@ -27,6 +27,10 @@ p {
     color: orange;
   }
 
+  p.red {
+    color: rgb(255, 0, 0);
+   }
+
 p {
     background-color: beige;
     color: blue;
