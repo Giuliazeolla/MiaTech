@@ -10,6 +10,11 @@ div.first-section {
     font-size: 30px;
 }
 
+div {
+    color: brown;
+    text-align: center;
+  }
+
 p {
     color: red;
   }
