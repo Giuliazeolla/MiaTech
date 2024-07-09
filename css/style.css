@@ -6,6 +6,10 @@
     font-size: 16px;
 }
 
+div.padding {
+    padding: 10%;
+}
+
 div.first-section {
     font-size: 30px;
 }
