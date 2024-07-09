@@ -15,6 +15,10 @@ div {
     text-align: center;
   }
 
+.color-1 {
+    color:darkgreen;
+}
+
 p {
     color: red;
   }
