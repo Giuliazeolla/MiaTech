@@ -9,6 +9,9 @@
 div.padding {
     padding: 10%;
     margin: 15%;
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
 }
 
 div.first-section {
