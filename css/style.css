@@ -107,3 +107,9 @@ ul li:last-child {
     font-size: 25px;
       color: green;
   }
+
+ul.lista {
+    display: inline-flex;
+    list-style-position: inside;
+    list-style-type: none;
+}
