@@ -5,3 +5,7 @@ img {
 p {
     float: left;
 }
+
+p.p-2 {
+    clear: both;
+}
