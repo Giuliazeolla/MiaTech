@@ -1,0 +1,23 @@
+p  span.span-1 {
+    border: 10px solid green;
+    background-color: blue;
+    height: auto;
+    width: 30px;
+    display: inline;
+}
+    
+p span.span-2 {
+    border: 10px solid green;
+    background-color: blue;
+    height: auto;
+    width: 30px;
+    display: inline-block;
+}
+
+p span.span-3 {
+    border: 10px solid green;
+    background-color: blue;
+    height: auto;
+    width: 30px;
+    display: block;
+}

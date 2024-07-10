@@ -113,3 +113,7 @@ ul.lista {
     list-style-position: inside;
     list-style-type: none;
 }
+
+ul li {
+    margin: 5px;
+}
