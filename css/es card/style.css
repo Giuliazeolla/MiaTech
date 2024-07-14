@@ -4,6 +4,11 @@
     border-radius: 5px;
 }
 
+span {
+    float: right;
+    margin-right: 95%;
+}
+
 img {
     border-radius: 5px 5px 0 0;
 }
