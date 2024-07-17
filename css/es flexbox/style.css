@@ -1,0 +1,6 @@
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    max-width: max-content
+    background-color: blueviolet;
+}
