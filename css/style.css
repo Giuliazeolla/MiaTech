@@ -109,11 +109,11 @@ ul li:last-child {
   }
 
 ul.lista {
-    display: inline-flex;
     list-style-position: inside;
     list-style-type: none;
 }
 
-ul li {
+ul.lista > li {
+    display: inline-block;
     margin: 5px;
 }

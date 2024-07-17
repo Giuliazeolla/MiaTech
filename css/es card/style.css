@@ -2,11 +2,12 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+    position: relative;
 }
 
 span {
-    float: right;
-    margin-right: 95%;
+    position: absolute;
+    right: 0;
 }
 
 img {
