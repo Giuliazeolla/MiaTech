@@ -9,7 +9,6 @@
     justify-content: center;
 }
 
-.content-1 {
-    width: 800px;
-    flex-shrink: 2;
-  }
+.content-2 {
+  flex-basis: 500px;
+}
