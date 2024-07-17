@@ -8,3 +8,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.content-3 {
+    flex-grow: 2;
+}
