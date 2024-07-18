@@ -19,7 +19,6 @@ header {
 main {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   position: relative;
@@ -32,6 +31,10 @@ main {
   padding-top: 200px;
   padding-bottom: 200px;
   width: 50%;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-shrink: 1;
 }
 
 .column-1  {
@@ -39,7 +42,8 @@ main {
   padding-top: 200px;
   padding-bottom: 200px;
   width: 25%;
-  
+  flex-shrink: 1;
+  margin-bottom: 0.75rem;
 }
 
 .column-2 {
@@ -47,4 +51,12 @@ main {
   padding-top: 200px;
   padding-bottom: 200px;
   width: 25%;
+  flex-shrink: 1;
+  margin-bottom: 0.75rem;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
 }
