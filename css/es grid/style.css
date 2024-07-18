@@ -1,0 +1,12 @@
+section {
+    display: grid;
+    max-width: 100%;
+}
+
+div {
+    border: solid 1px black;
+    background-color: red;
+    text-align: center;
+    width: 50%;
+    height: 100px;
+}
