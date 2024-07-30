@@ -1,12 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1152px;
+}
+
 .grid-container {
     display: grid;
-    grid-template-rows: 20px 40px ;
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 1152px;
+    grid-template-rows: 20px 40px;
+    grid-template-columns: repeat(5, 50px);
     gap: 10px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item {
     background-color: lightpink;
+    text-align: center;
 }
 
