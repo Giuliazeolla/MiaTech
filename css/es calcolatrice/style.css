@@ -1,0 +1,40 @@
+body {
+    max-width: 1480px;
+    margin-left: 30.8rem;
+    margin-right: 30.8rem;
+}
+
+#calculator {
+    width: 470px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 100px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background-color: aqua;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+#result {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    height: 100px;
+    grid-area: 1 / 1 / 1 / span 4;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+button {
+    height: 50px;
+    border-radius: 5px;
+}
+
+button.number {
+    background-color: magenta;
+}
+
+button.operator {
+    background-color: pink;
+}
