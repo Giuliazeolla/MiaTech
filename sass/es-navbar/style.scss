@@ -1,3 +1,5 @@
+$nav-color: magenta;
+
 body {
     width: 100%;
     display: flex;
@@ -16,6 +18,7 @@ body {
             gap: 30px;
             .nav__menu-item {
                 font-size: 18px;
+                color: $nav-color;
                 &:hover {
                     color: #ff0000;
                 }

@@ -19,6 +19,7 @@ body nav .nav__menu {
 }
 body nav .nav__menu .nav__menu-item {
   font-size: 18px;
+  color: magenta;
 }
 body nav .nav__menu .nav__menu-item:hover {
   color: #ff0000;
