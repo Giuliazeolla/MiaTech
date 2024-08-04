@@ -1,3 +1,7 @@
+.sfondo, body nav .nav__menu .nav__menu-item .nav__menu-item4 {
+  background-color: #e7e7e7;
+}
+
 body {
   width: 100%;
   display: flex;
@@ -23,6 +27,9 @@ body nav .nav__menu .nav__menu-item {
 }
 body nav .nav__menu .nav__menu-item:hover {
   color: #ff0000;
+}
+.nav__menu-item4 {
+  border: 1px solid #333333;
 }
 
 /*# sourceMappingURL=style.css.map */
