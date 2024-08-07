@@ -41,4 +41,8 @@ body nav .nav__menu .nav__menu-item:hover {
   width: 100%;
 }
 
+p {
+  color: orange;
+}
+
 /*# sourceMappingURL=style.css.map */
