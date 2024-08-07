@@ -1,4 +1,4 @@
-.sfondo, body nav .nav__menu .nav__menu-item .nav__menu-item4 {
+.sfondo, .nav__menu-item4 {
   background-color: #e7e7e7;
 }
 
@@ -28,8 +28,17 @@ body nav .nav__menu .nav__menu-item {
 body nav .nav__menu .nav__menu-item:hover {
   color: #ff0000;
 }
+
 .nav__menu-item4 {
   border: 1px solid #333333;
+}
+
+.first {
+  width: 33.3333333333%;
+}
+
+.second {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
