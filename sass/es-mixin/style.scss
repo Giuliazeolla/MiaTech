@@ -1,0 +1,50 @@
+$nav-color-light: magenta;
+$nav-color-dark: white;
+$background-color-light: #e7e7e7;
+$background-color-dark: #000000;
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin nav($background-color) {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid lightgrey;
+    background-color: $background-color;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@mixin nav__menu-item ($text-color) {
+    font-size: 18px;
+    color: $text-color;
+}
+
+.nav-light-theme {
+    @include nav($background-color-light);
+    @include nav__menu-item($nav-color-light);
+
+    &:hover {
+        color: #ff0000;
+    }
+}
+
+.nav-dark-theme {
+    @include nav($background-color-dark);
+    @include nav__menu-item($nav-color-dark);
+
+    &:hover {
+        color: yellow;
+    }
+}
