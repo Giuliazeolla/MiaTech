@@ -1,0 +1,14 @@
+$clear: lightpink;
+$dark: darkblue;
+
+@for $i from 0 through 0 {
+    .first {
+      background-color: $clear;
+    }
+  }
+
+@for $i from 0 through 0 {
+    .second {
+        background-color: $dark;
+    }
+}
