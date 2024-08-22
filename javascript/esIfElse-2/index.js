@@ -1,4 +1,4 @@
-let score = parseInt(prompt 'Inserisci un voto'());
+let score = parseInt(prompt());
 
 if (score >= 90 && score <= 100) {
     console.log("voto ottimo");
