@@ -9,3 +9,6 @@ console.log(person.age);
 
 person.age = 26;
 console.log(person.age);
+
+person.surname = "Zeolla";
+console.log(person.surname); 
