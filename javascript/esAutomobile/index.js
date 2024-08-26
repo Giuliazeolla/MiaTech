@@ -2,6 +2,7 @@ class automobile {
     marca = ""
     modello = ""
     anno = 0
+    km = 0
 
     constructor(marca, modello, anno) {
         this.marca = marca;
@@ -12,5 +13,13 @@ class automobile {
     descrizione(automobile) {
         return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}`;
     }
+
+    aggiungiChilometri(km) {
+        this.km ++;
+    }
+
+    descrizione(km) {
+        return aggiungiChilometri();
+    }
 }
-const macchina = new automobile("Audi", "A3", 2008);
+const macchina = new automobile("Audi", "A3", 2008, 250.000);
