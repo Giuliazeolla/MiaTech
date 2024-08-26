@@ -11,7 +11,7 @@ class automobile {
     }
 
     descrizione(automobile) {
-        return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}`;
+        return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}, ${this.km}`;
     }
 
     aggiungiChilometri(km) {
@@ -22,4 +22,22 @@ class automobile {
         return aggiungiChilometri();
     }
 }
+
+class elettrica extends automobile {
+    autonomia = 0 
+
+    constructor(marca, modello, anno, km, autonomia) {
+        super(marca, modello, anno, km);
+        this.autonomia = autonomia;
+    }
+
+    descrizione(automobile) {
+        return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}, ${this.km}, ${this.autonomia}`;
+    }
+
+    ricarica(km) {
+        this.autonomia ++;
+    }
+}
+
 const macchina = new automobile("Audi", "A3", 2008, 250.000);
