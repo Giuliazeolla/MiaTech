@@ -11,14 +11,14 @@ class automobile {
     }
 
     descrizione(automobile) {
-        return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}, ${this.km}`;
+        return `Descrizione automobile: ${this.marca}, ${this.modello}, ${this.anno}`;
     }
 
     aggiungiChilometri(km) {
         this.km ++;
     }
 
-    descrizione(km) {
+    mostraChilometraggio(km) {
         return aggiungiChilometri();
     }
 }
@@ -40,4 +40,8 @@ class elettrica extends automobile {
     }
 }
 
-const macchina = new automobile("Audi", "A3", 2008, 250.000);
+automobile.prototype.saluta = function(marca, modello, anno, km, autonomia) {
+    return `Ciao, questa è una ${this.marca} ${this.modello}!`;
+}
+
+const macchina = new automobile("Audi", "A3", 2008, 250.000, 500.000);
