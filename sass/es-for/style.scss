@@ -1,14 +1,12 @@
 $clear: lightpink;
 $dark: darkblue;
 
-@for $i from 0 through 0 {
-    .first {
+@for $i from 1 through 2 {
+  .item-#{$i} {
+    @if($i == 1) {
       background-color: $clear;
+    } @else {
+      background-color: $dark;
     }
   }
-
-@for $i from 0 through 0 {
-    .second {
-        background-color: $dark;
-    }
-}
+} 
