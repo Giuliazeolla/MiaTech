@@ -22,6 +22,12 @@ class automobile {
         return aggiungiChilometri();
     }
 
+    _controllaChilometri(limite = 100000){
+        if(this.km > limite) {
+            return `ATTENZIONE! Il chilometraggio di ${this.km} km è al il limite massimo di ${limite} km`;
+        }
+    }
+
     #calcolaEtà(anno) {
         const annoC = new Date().getFullYear();
         return annoC - this.anno;
@@ -35,6 +41,7 @@ class automobile {
 
 const macchina = new automobile("Audi", "A3", 2008, 250000, 500000);
 macchina.mostraEtà();
+
 
 class elettrica extends automobile {
     autonomia = 0 
@@ -51,8 +58,16 @@ class elettrica extends automobile {
     ricarica(km) {
         this.autonomia ++;
     }
-    
+
+    mostraAvvisoChilometraggio() {
+        const avviso = this._controllaChilometri();
+        return avviso;
+    }
 }
+const autoElettrica = new elettrica("Tesla", "Model S", 2020, 300000, 300);
+autoElettrica.mostraAvvisoChilometraggio();
+
+
 
 automobile.prototype.saluta = function(marca, modello, anno, km, autonomia) {
     return `Ciao, questa è una ${this.marca} ${this.modello}!`;
