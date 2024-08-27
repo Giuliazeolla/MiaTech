@@ -4,10 +4,11 @@ class automobile {
     anno = 0
     km = 0
 
-    constructor(marca, modello, anno) {
+    constructor(marca, modello, anno, km) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
+        this.km = km;
     }
 
     descrizione(automobile) {
@@ -28,6 +29,21 @@ class automobile {
         }
     }
 
+    mostraAvvisoChilometraggio(limite = 100000) {
+        const avviso = this._controllaChilometri(limite);
+        return avviso;
+    }
+
+    static confrontaChilometraggio(macchina, macchina2) {
+        if(macchina.km > macchina2.km) {
+            return `L' ${macchina.marca} ha un chilometraggio di ${macchina.km} che è maggiore della ${macchina2.marca}`;
+        } else if(macchina.km < macchina2.km) {
+            return `La ${macchina2.marca} ha un chilometraggio di ${macchina2.km} che è maggiore dell' ${macchina.marca}`;
+        } else {
+            return `La prima auto e la seconda auto hanno lo stesso numero di chilometri`;
+        }
+    }
+
     #calcolaEtà(anno) {
         const annoC = new Date().getFullYear();
         return annoC - this.anno;
@@ -39,8 +55,10 @@ class automobile {
     }
 }
 
-const macchina = new automobile("Audi", "A3", 2008, 250000, 500000);
+const macchina = new automobile("Audi", "A3", 2008, 250000, 500);
+const macchina2 = new automobile("Volkswagen", "Polo", 2016, 175000, 400)
 macchina.mostraEtà();
+console.log(automobile.confrontaChilometraggio(macchina, macchina2));
 
 
 class elettrica extends automobile {
@@ -48,6 +66,7 @@ class elettrica extends automobile {
 
     constructor(marca, modello, anno, km, autonomia) {
         super(marca, modello, anno, km);
+
         this.autonomia = autonomia;
     }
 
@@ -58,15 +77,9 @@ class elettrica extends automobile {
     ricarica(km) {
         this.autonomia ++;
     }
-
-    mostraAvvisoChilometraggio() {
-        const avviso = this._controllaChilometri();
-        return avviso;
-    }
 }
 const autoElettrica = new elettrica("Tesla", "Model S", 2020, 300000, 300);
-autoElettrica.mostraAvvisoChilometraggio();
-
+console.log(autoElettrica.mostraAvvisoChilometraggio());
 
 
 automobile.prototype.saluta = function(marca, modello, anno, km, autonomia) {
