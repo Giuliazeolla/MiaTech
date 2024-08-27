@@ -21,7 +21,20 @@ class automobile {
     mostraChilometraggio(km) {
         return aggiungiChilometri();
     }
+
+    #calcolaEtà(anno) {
+        const annoC = new Date().getFullYear();
+        return annoC - this.anno;
+    }
+
+    mostraEtà() {
+        const età = this.#calcolaEtà();
+        console.log(età);
+    }
 }
+
+const macchina = new automobile("Audi", "A3", 2008, 250000, 500000);
+macchina.mostraEtà();
 
 class elettrica extends automobile {
     autonomia = 0 
@@ -38,10 +51,10 @@ class elettrica extends automobile {
     ricarica(km) {
         this.autonomia ++;
     }
+    
 }
 
 automobile.prototype.saluta = function(marca, modello, anno, km, autonomia) {
     return `Ciao, questa è una ${this.marca} ${this.modello}!`;
 }
 
-const macchina = new automobile("Audi", "A3", 2008, 250.000, 500.000);
