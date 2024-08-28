@@ -3,6 +3,7 @@ class automobile {
     modello = ""
     anno = 0
     km = 0
+    #contatoreChimate = 0
 
     constructor(marca, modello, anno, km) {
         this.marca = marca;
@@ -16,7 +17,9 @@ class automobile {
     }
 
     aggiungiChilometri(km) {
-        this.km ++;
+        this.km += km;
+        this.#contatoreChimate++;
+        return this.#contatoreChimate;
     }
 
     mostraChilometraggio(km) {
@@ -59,7 +62,7 @@ const macchina = new automobile("Audi", "A3", 2008, 250000, 500);
 const macchina2 = new automobile("Volkswagen", "Polo", 2016, 175000, 400)
 macchina.mostraEtà();
 console.log(automobile.confrontaChilometraggio(macchina, macchina2));
-
+console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del contatore 
 
 class elettrica extends automobile {
     autonomia = 0 
@@ -75,7 +78,7 @@ class elettrica extends automobile {
     }
 
     ricarica(km) {
-        this.autonomia ++;
+        this.autonomia += autonomia;
     }
 }
 const autoElettrica = new elettrica("Tesla", "Model S", 2020, 300000, 300);
