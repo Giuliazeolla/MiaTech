@@ -56,6 +56,10 @@ class automobile {
         let esegui = this.#incrementaContatore();
         console.log(`Contatore chiamate: ${this.#contatoreChimate}`);
     }
+
+    monstraContatoreChiamate() {
+        return macchina.esegui();
+    }
     
     #calcolaEtà(anno) {
         const annoC = new Date().getFullYear();
@@ -75,6 +79,8 @@ console.log(automobile.confrontaChilometraggio(macchina, macchina2));
 console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del contatore 
 macchina.esegui();
 macchina.esegui();
+macchina.monstraContatoreChiamate();
+
 
 
 class elettrica extends automobile {
