@@ -47,6 +47,10 @@ class automobile {
         }
     }
 
+    #incrementaContatore() {
+        this.#contatoreChimate++;
+    }
+
     #calcolaEtà(anno) {
         const annoC = new Date().getFullYear();
         return annoC - this.anno;
@@ -63,6 +67,8 @@ const macchina2 = new automobile("Volkswagen", "Polo", 2016, 175000, 400)
 macchina.mostraEtà();
 console.log(automobile.confrontaChilometraggio(macchina, macchina2));
 console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del contatore 
+
+
 
 class elettrica extends automobile {
     autonomia = 0 
