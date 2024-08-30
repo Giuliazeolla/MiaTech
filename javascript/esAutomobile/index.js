@@ -103,11 +103,14 @@ class elettrica extends automobile {
     }
 
     ricarica(km) {
-        this.autonomia += autonomia;
+        this.autonomia += km;
+        return `L'autonomia della batteria è aumentata di ${km} km`;
     }
 }
 const autoElettrica = new elettrica("Tesla", "Model S", 2020, 300000, 300);
 console.log(autoElettrica.mostraAvvisoChilometraggio());
+console.log(autoElettrica.descrizione());
+console.log(autoElettrica.ricarica(100));
 
 
 automobile.prototype.saluta = function(marca, modello, anno, km, autonomia) {
