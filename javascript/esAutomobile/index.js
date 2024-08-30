@@ -60,6 +60,10 @@ class automobile {
     monstraContatoreChiamate() {
         return macchina.esegui();
     }
+
+    get km() {
+        return this.km;
+    }
     
     #calcolaEtà(anno) {
         const annoC = new Date().getFullYear();
@@ -80,6 +84,7 @@ console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del 
 macchina.esegui();
 macchina.esegui();
 macchina.monstraContatoreChiamate();
+console.log(macchina2.km);
 
 
 
