@@ -23,7 +23,7 @@ class automobile {
     }
 
     mostraChilometraggio(km) {
-        return aggiungiChilometri();
+        return this.km;
     }
 
     _controllaChilometri(limite = 100000){
@@ -85,6 +85,7 @@ macchina.esegui();
 macchina.esegui();
 macchina.monstraContatoreChiamate();
 console.log(macchina2.km);
+console.log(macchina.mostraChilometraggio());
 
 
 
