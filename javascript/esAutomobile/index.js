@@ -132,3 +132,9 @@ automobile.prototype.saluta = function() {
 console.log(macchina.saluta());
 console.log(autoElettrica.saluta());
 
+class camion extends automobile {
+
+    constructor(marca, modello, anno, km, autonomia) {
+        super(marca, modello, anno, km, autonomia);
+    }
+}
