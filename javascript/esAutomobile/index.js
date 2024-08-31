@@ -58,7 +58,7 @@ class automobile {
     }
 
     monstraContatoreChiamate() {
-        return macchina.esegui();
+        return this.esegui();
     }
 
     get km() {
