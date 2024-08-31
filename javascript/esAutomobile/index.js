@@ -2,7 +2,7 @@ class automobile {
     marca = ""
     modello = ""
     anno = 0
-    km = 0
+    _km = 0
     #contatoreChimate = 0
 
     constructor(marca, modello, anno, km) {
@@ -62,7 +62,15 @@ class automobile {
     }
 
     get km() {
-        return this.km;
+        return this._km;
+    }
+
+    set km(valore) {
+        if(valore >= this._km) {
+            this._km = valore;
+        } else {
+            console.log(`Il nuovo valore non può essere inferiore al valore corrente`);
+        }
     }
     
     #calcolaEtà(anno) {
@@ -85,7 +93,11 @@ macchina.esegui();
 macchina.esegui();
 macchina.monstraContatoreChiamate();
 console.log(macchina2.km);
+macchina2.km = 165000;
+macchina2.km = 190000;
+console.log(macchina2.km);
 console.log(macchina.mostraChilometraggio());
+
 
 
 
