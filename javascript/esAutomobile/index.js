@@ -113,7 +113,7 @@ console.log(autoElettrica.descrizione());
 console.log(autoElettrica.ricarica(100));
 
 
-automobile.prototype.saluta = function(marca, modello) {
+automobile.prototype.saluta = function() {
     return `Ciao, questa è una ${this.marca} ${this.modello}!`;
 }
 
