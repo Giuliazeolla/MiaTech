@@ -133,8 +133,30 @@ console.log(macchina.saluta());
 console.log(autoElettrica.saluta());
 
 class camion extends automobile {
+    caricoMassimo = 0;
+    capacitàCarico = 0;
 
-    constructor(marca, modello, anno, km, autonomia) {
+    constructor(marca, modello, anno, km, autonomia, caricoMassimo, capacitàCarico) {
         super(marca, modello, anno, km, autonomia);
+        this.caricoMassimo = caricoMassimo;
+        this.capacitàCarico = capacitàCarico;
+    }
+
+    descrizione() {
+        return `${super.descrizione()} con un carico massimo di ${this.caricoMassimo}kg e una capacità attuale di ${this.capacitàCarico}kg`;
+    }
+
+    carica(kg) {
+        if(this.capacitàCarico + kg <= this.caricoMassimo) {
+            this.capacitàCarico += kg;
+            console.log(`Il carico è aumentato di ${kg}kg, quindi il carico attuale ora è di ${this.capacitàCarico}kg`);
+        } else {
+            console.log(`Il carico attuale non può essere maggiore del carico massimo di ${this.caricoMassimo}kg`);
+        }
     }
 }
+
+const mioCamion = new camion("Iveco", "190", 2012, 20000, 150000, 400, 200);
+console.log(mioCamion.descrizione());
+mioCamion.carica(50);
+mioCamion.carica(500);
