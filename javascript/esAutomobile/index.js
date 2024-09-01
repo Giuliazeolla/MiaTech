@@ -82,6 +82,14 @@ class automobile {
         const età = this.#calcolaEtà();
         console.log(età);
     }
+
+    static verificaIstanza(obj, classe) {
+        if(obj instanceof classe) {
+            return `${obj.marca} è un'istanza di ${classe.name}`;
+        } else {
+            return `${obj.marca} non è un'istanza di ${classe.name}`;
+        }
+    }
 }
 
 const macchina = new automobile("Audi", "A3", 2008, 250000, 500);
@@ -160,3 +168,9 @@ const mioCamion = new camion("Iveco", "190", 2012, 20000, 150000, 400, 200);
 console.log(mioCamion.descrizione());
 mioCamion.carica(50);
 mioCamion.carica(500);
+console.log(mioCamion instanceof automobile);
+console.log(macchina2 instanceof camion);
+console.log(mioCamion instanceof camion);
+console.log(automobile.verificaIstanza(mioCamion, camion));
+console.log(automobile.verificaIstanza(mioCamion, automobile));
+console.log(automobile.verificaIstanza(macchina2, camion));
