@@ -3,7 +3,9 @@ const person = {
     age: 23
 }
 
-const { name: namePerson, age: agePerson} = person;
+const { name, age, work = "non specificato", country = "non specificato" } = person;
 
-console.log(namePerson);
-console.log(agePerson);
+console.log(name);
+console.log(age);
+console.log(work);
+console.log(country);
