@@ -51,14 +51,8 @@ class automobile {
         this.#contatoreChimate++;
     }
 
-    /*Al posto di aggiungiChilometri utilizzo un nome diverso perchè già esistente*/
-    esegui() {
-        let esegui = this.#incrementaContatore();
-        console.log(`Contatore chiamate: ${this.#contatoreChimate}`);
-    }
-
     monstraContatoreChiamate() {
-        return this.esegui();
+        return this.#contatoreChimate;
     }
 
     get km() {
@@ -96,16 +90,14 @@ const macchina = new automobile("Audi", "A3", 2008, 250000, 500);
 const macchina2 = new automobile("Volkswagen", "Polo", 2016, 175000, 400)
 macchina.mostraEtà();
 console.log(automobile.confrontaChilometraggio(macchina, macchina2));
-console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del contatore 
-macchina.esegui();
-macchina.esegui();
-macchina.monstraContatoreChiamate();
+console.log(macchina.aggiungiChilometri(macchina.km)); //Numero di chiamate del contatore  
+macchina.aggiungiChilometri();
 console.log(macchina2.km);
 macchina2.km = 165000;
 macchina2.km = 190000;
 console.log(macchina2.km);
 console.log(macchina.mostraChilometraggio());
-
+console.log(`Il metodo aggiungiChilometri è stato chiamato ${macchina.monstraContatoreChiamate()} volte`);// aggiungiChilometri() èstato chiamato 2 volte (1 volta a riga 93 e 1 volta a riga 94))
 
 
 
