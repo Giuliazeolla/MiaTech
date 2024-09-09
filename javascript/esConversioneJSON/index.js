@@ -1,0 +1,11 @@
+const persona = {
+    nome: "Giulia",
+    cognome: "Zeolla",
+    età: 23,
+    città: "Benevento"
+  };
+  
+  const jsonString = JSON.stringify(persona);
+  
+  console.log(jsonString);
+  
