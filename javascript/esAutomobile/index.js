@@ -100,7 +100,6 @@ console.log(macchina.mostraChilometraggio());
 console.log(`Il metodo aggiungiChilometri è stato chiamato ${macchina.monstraContatoreChiamate()} volte`);// aggiungiChilometri() èstato chiamato 2 volte (1 volta a riga 93 e 1 volta a riga 94))
 
 
-
 class elettrica extends automobile {
     autonomia = 0 
 
