@@ -22,3 +22,18 @@ if (stato === "errore") {
 } else {
   console.log("Tutto sembra andare bene.");
 }
+
+
+
+const persone = [
+  { nome: "Mario", cognome: "Rossi", età: 30 },
+  { nome: "Giulia", cognome: "Zeolla", età: 23 },
+  { nome: "Emanuele", cognome: "Sasso", età: 23 }
+];
+
+console.table(persone);
+
+console.group("Informazioni sui gruppi");
+console.log("Questi sono i dati delle persone:");
+console.table(persone);
+console.groupEnd();
