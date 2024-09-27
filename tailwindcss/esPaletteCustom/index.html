@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customyellow: '#e6e317',
+                        customgreen: '#17e677',
+                        custombrown: '#571406',
+                    },
+                    margin: {
+                        '40px' : '40px'
+                    },
+                    padding: {
+                        '30px' : '30px'
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <div class="my-[40px] mx-[40px] pl-[30px]">
+        <button class="bg-customyellow">Yellow</button>
+        <button class="bg-customgreen">Green</button>
+        <button class="bg-custombrown">Brown</button>
+    </div>
+</body>
+</html>
