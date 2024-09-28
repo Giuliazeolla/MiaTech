@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customblue: '#1e3a8a',
+                        custompink: '#ec4899',
+                        customgreen: '#10b981',
+                        customyellow: '#f59e0b',
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-customblue mb-4">Benvenuto nel Mio Layout Personalizzato</h1>
+        <p class="text-lg text-customgreen">Questo è un esempio di layout che utilizza colori di testo
+            personalizzati per vari elementi.</p>
+    </header>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="p-6 border border-gray-200 rounded-lg shadow-md bg-white">
+            <h2 class="text-2xl font-semibold text-custompink mb-4">Introduzione al Layout</h2>
+            <p class="text-base text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, congue neque
+                non, blandit magna.
+                <a href="#" class="text-customyellow font-bold underline">Scopri di più</a>.
+            </p>
+        </article>
+        <article class="p-6 border border-gray-200 rounded-lg shadow-md bg-white">
+            <h2 class="text-2xl font-semibold text-customgreen mb-4">Usare Colori Personalizzati</h2>
+            <p class="text-base text-gray-600">
+                In questo esempio utilizziamo Tailwind CSS per definire una palette di colori personalizzati e
+                applicarli ai vari elementi.
+                <a href="#" class="text-customblue font-bold underline">Esplora di più</a>.
+            </p>
+        </article>
+        <article class="p-6 border border-gray-200 rounded-lg shadow-md bg-white">
+            <h2 class="text-2xl font-semibold text-customyellow mb-4">Collegamenti e Testo Colorato</h2>
+            <p class="text-base text-gray-600">
+                I colori personalizzati possono essere applicati anche ai collegamenti per dare maggiore enfasi e
+                personalizzazione.
+                <a href="#" class="text-custompink font-bold underline">Leggi di più</a>.
+            </p>
+        </article>
+    </main>
+    <footer class="mt-12 text-center">
+        <p class="text-base text-gray-500">
+            © 2024 - Creato con <span class="text-customyellow">amore</span> e <span class="text-customgreen">Tailwind
+                CSS</span>.
+        </p>
+    </footer>
+
+</body>
+
+</html>
