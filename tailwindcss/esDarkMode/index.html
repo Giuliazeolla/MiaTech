@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+  darkMode: 'media',
+  theme: {
+    extend: {
+      colors: {
+        customblue: '#1e3a8a',
+        custompink: '#ec4899',
+        customgreen: '#10b981',
+        customyellow: '#f59e0b',
+      },
+    },
+  },
+  plugins: [],
+}
+</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 p-8">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-customblue dark:text-custompink mb-4">Benvenuto nella Modalità Scura</h1>
+        <p class="text-lg text-customgreen dark:text-customyellow">Questa pagina cambia stile automaticamente in base
+            alle impostazioni del sistema operativo.</p>
+    </header>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md bg-white dark:bg-gray-800">
+            <h2 class="text-2xl font-semibold text-custompink dark:text-customyellow mb-4">Introduzione alla Modalità
+                Scura</h2>
+            <p class="text-base text-gray-600 dark:text-gray-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, congue neque
+                non, blandit magna.
+                <a href="#" class="text-customyellow dark:text-customgreen font-bold underline">Scopri di più</a>.
+            </p>
+        </article>
+        <article class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md bg-white dark:bg-gray-800">
+            <h2 class="text-2xl font-semibold text-customgreen dark:text-customblue mb-4">Cosa succede in Modalità
+                Scura?</h2>
+            <p class="text-base text-gray-600 dark:text-gray-300">
+                In modalità scura, cambiano non solo i colori del testo, ma anche lo sfondo e i bordi degli elementi.
+                <a href="#" class="text-customblue dark:text-custompink font-bold underline">Esplora di più</a>.
+            </p>
+        </article>
+    </main>
+    <footer class="mt-12 text-center">
+        <p class="text-base text-gray-500 dark:text-gray-400">
+            © 2024 - Creato con <span class="text-customyellow dark:text-customgreen">amore</span> e <span
+                class="text-customgreen dark:text-customyellow">Tailwind CSS</span>.
+        </p>
+    </footer>
+
+</body>
+
+</html>
