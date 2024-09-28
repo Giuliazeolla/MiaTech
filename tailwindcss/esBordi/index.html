@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customblue: '#1e3a8a',
+                        custompink: '#ec4899',
+                        customgreen: '#10b981',
+                        customyellow: '#f59e0b',
+                    },
+                },
+            },
+            plugins: [],
+        }
+
+    </script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-customblue text-white border-4 border-custompink p-4 m-4">
+        <h2 class="text-xl font-bold mb-2">Custom Blue Card</h2>
+        <p class="text-base">
+            Questo è un esempio di una card con uno sfondo blu personalizzato e un bordo rosa personalizzato.
+        </p>
+    </div>
+
+    <div
+        class="max-w-sm rounded overflow-hidden shadow-lg bg-customgreen text-white border-4 border-customyellow p-4 m-4">
+        <h2 class="text-xl font-bold mb-2">Custom Green Card</h2>
+        <p class="text-base">
+            Questo è un esempio di una card con uno sfondo verde personalizzato e un bordo giallo personalizzato.
+        </p>
+    </div>
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-custompink text-white border-4 border-customblue p-4 m-4">
+        <h2 class="text-xl font-bold mb-2">Custom Pink Card</h2>
+        <p class="text-base">
+            Questo è un esempio di una card con uno sfondo rosa personalizzato e un bordo blu personalizzato.
+        </p>
+    </div>
+
+</body>
+
+</html>
