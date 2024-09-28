@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+      </style>
+    </head>
+    <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen p-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-4 text-customblue dark:text-custompink">Benvenuto nel Layout con Modalità Chiara e Scura</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">Questo layout cambia automaticamente in base alla modalità del sistema operativo.</p>
+      </header>
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Modalità Chiara</h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            In modalità chiara, lo sfondo e il testo appaiono in colori più vivaci e chiari.
+          </p>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Modalità Scura</h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            In modalità scura, il testo e gli sfondi cambiano a tonalità più scure, offrendo un'esperienza visiva confortevole in ambienti poco illuminati.
+          </p>
+        </div>
+        <div class="p-6 bg-customyellow dark:bg-customblue border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Colori Personalizzati</h2>
+          <p class="text-gray-700 dark:text-gray-200">
+            Questo box utilizza colori personalizzati che cambiano tra le modalità chiara e scura, passando da giallo a blu.
+          </p>
+        </div>
+        <div class="p-6 bg-custompink dark:bg-customgreen border border-gray-300 dark:border-gray-700 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Ancora più Colori</h2>
+          <p class="text-gray-700 dark:text-gray-200">
+            Un altro esempio di cambio di colori: questo box passa dal rosa in modalità chiara al verde in modalità scura.
+          </p>
+        </div>
+      </main>
+      <footer class="mt-12 text-center">
+        <p class="text-base text-gray-500 dark:text-gray-400">
+          © 2024 - Layout reattivo con <span class="text-customyellow dark:text-customgreen">modalità scura</span> e <span class="text-customgreen dark:text-customyellow">Tailwind CSS</span>.
+        </p>
+      </footer>
+    
+    </body>
+    </html>
