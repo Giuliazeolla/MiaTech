@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+      </style>
+    </head>
+    <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-8 space-y-6">
+    
+      <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Pulsanti con Effetto Hover</h1>
+        <p class="text-lg text-gray-600">Passa il mouse sopra i pulsanti per vedere gli effetti.</p>
+      </header>
+      <button class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+        Hover Background Color
+      </button>
+    
+      <button class="px-6 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:text-white hover:bg-gray-900 transition duration-300">
+        Hover Text Color
+      </button>
+    
+      <button class="px-6 py-2 border-2 border-gray-400 text-gray-800 font-semibold rounded-lg hover:border-gray-800 hover:bg-gray-800 hover:text-white transition duration-300">
+        Hover Border & Background
+      </button>
+    
+      <button class="px-6 py-2 bg-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-700/60 transition duration-300">
+        Hover Shadow
+      </button>
+    
+      <button class="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:scale-105 transition duration-300 transform">
+        Hover Scale
+      </button>
+
+      <button class="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg hover:opacity-70 transition duration-300">
+        Hover Opacity
+      </button>
+    
+      <button class="px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:rotate-12 transition duration-300 transform">
+        Hover Rotate
+      </button>
+    
+    </body>
+    </html>
