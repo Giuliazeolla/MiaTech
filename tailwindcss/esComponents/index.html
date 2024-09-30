@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componente Personalizzato con Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1da1f2',
+            secondary: '#14171a',
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .btn {
+        border: solid 1px black;
+        border-radius: 0.85rem;
+        padding: 1rem;
+      }
+
+      .btn-primary {
+        @apply btn bg-red-800 text-primary font-bold py-2 px-4 rounded;
+      }
+    };
+  </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+  <div class="buttons">
+    <button class="btn">Cliccami!</button>
+    <button class="btn-primary">Cliccami!</button>
+  </div>
+</body>
+</html>
