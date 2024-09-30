@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10"></body>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center">Responsive Visibility</h1>
+        <div class="bg-blue-300 p-6 mb-4 text-center hidden md:block lg:hidden">
+            Questo elemento è visibile solo su schermi medi (tablet).
+        </div>
+        <div class="bg-green-300 p-6 mb-4 text-center hidden md:block">
+            Questo elemento è nascosto su mobile, ma visibile su tablet e desktop.
+        </div>
+        <div class="bg-red-300 p-6 mb-4 text-center lg:hidden">
+            Questo elemento è nascosto su desktop, ma visibile su mobile e tablet.
+        </div>
+        <div class="bg-yellow-300 p-6 mb-4 text-center hidden lg:block">
+            Questo elemento è visibile solo su schermi grandi (desktop).
+        </div>
+    </div>
+</body>
+</html>
