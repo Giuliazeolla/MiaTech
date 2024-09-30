@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerarchia di Stili con Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#1E40AF',    
+        secondary: '#2563EB',  
+        accent: '#3B82F6',     
+        muted: '#94A3B8',      
+        background: {
+          light: '#F3F4F6',    
+          dark: '#111827'      
+        },
+        text: {
+          heading: '#1F2937',
+          body: '#4B5563',     
+          link: '#3B82F6'  
+        }
+      },
+      fontSize: {
+        'heading-large': '2rem',    
+        'heading-medium': '1.5rem', 
+        'body-large': '1.125rem',   
+        'body-small': '0.875rem'    
+      },
+      boxShadow: {
+        'card': '0 4px 6px rgba(0, 0, 0, 0.1)',
+        'button': '0 2px 4px rgba(0, 0, 0, 0.1)', 
+      },
+      borderRadius: {
+        'small': '0.5rem', 
+        'large': '1rem'    
+      }
+    }
+  },
+}
+</script>
+</head>
+<body class="bg-background-light text-text-body">
+  <header class="bg-primary text-white p-8">
+    <h1 class="text-heading-large font-bold mb-4">Benvenuto nel nostro sito</h1>
+    <p class="text-body-large">Sfrutta la potenza della gerarchia di stili per creare un design pulito e coerente.</p>
+  </header>
+  <section class="p-8">
+    <div class="grid grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-large shadow-card">
+        <h2 class="text-heading-medium font-semibold mb-2">Card Titolo</h2>
+        <p class="text-body-large text-muted">Questa è una card con testo attenuato.</p>
+        <a href="#" class="text-link font-bold">Scopri di più</a>
+      </div>
+      <div class="bg-secondary text-white p-6 rounded-large shadow-card">
+        <h2 class="text-heading-medium font-semibold mb-2">Card Titolo</h2>
+        <p class="text-body-large">Questa card ha uno sfondo colorato con testo chiaro.</p>
+        <a href="#" class="text-white underline">Scopri di più</a>
+      </div>
+      <div class="bg-accent text-white p-6 rounded-large shadow-card">
+        <h2 class="text-heading-medium font-semibold mb-2">Card Titolo</h2>
+        <p class="text-body-large">Questa è un'altra card con un colore di accento.</p>
+        <a href="#" class="text-white underline">Scopri di più</a>
+      </div>
+
+    </div>
+  </section>
+  <section class="p-8">
+    <button class="bg-primary text-white font-bold py-2 px-4 rounded-small shadow-button hover:bg-accent">
+      Pulsante Primario
+    </button>
+    <button class="bg-muted text-black font-bold py-2 px-4 rounded-small shadow-button hover:bg-secondary">
+      Pulsante Secondario
+    </button>
+  </section>
+
+</body>
+</html>
