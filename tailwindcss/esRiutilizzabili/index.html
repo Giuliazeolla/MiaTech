@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a202c',
+            secondary: '#2d3748',
+            accent: '#4a5568',
+          },
+        },
+        button: {
+          default: '#3182ce',
+          hover: '#2b6cb0',
+          active: '#2c5282'
+        },
+
+        boxShadow: {
+          card: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          button: '0 2px 4px rgba(0, 0, 0, 0.1)'
+        },
+        borderRadius: {
+          'card': '12px',
+          'button': '8px'
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-card shadow-card mt-10">
+    <h2 class="text-primary text-xl font-bold mb-4">Card riutilizzabile</h2>
+    <p class="text-secondary">Questa è la struttura di una card riutilizzabile costruita con Tailwind</p>
+  </div>
+
+  <div class="flex justify-center mt-6">
+    <button
+      class="bg-button-default hover:bg-button-hover active:bg-button-active text-white font-bold py-2 px-4 rounded-button shadow-button">
+      Cliccami!
+    </button>
+  </div>
+
+</body>
+
+</html>
