@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+    <header class="bg-blue-500 text-white p-4 text-center text-2xl font-bold">
+        Responsive Layout
+    </header>
+    <div class="container mx-auto mt-6">
+        <div class="flex flex-wrap">
+            <div class="w-full sm:w-1/2 lg:w-2/3 bg-white p-4">
+                <h2 class="text-xl font-bold mb-4">Contenuto principale</h2>
+                <p class="mb-4">Questo è il contenuto principale della pagina. Utilizziamo le classi di Tailwind per
+                    creare un layout che si adatta a diverse dimensioni di schermo. Su schermi piccoli (mobile), questa
+                    colonna occupa l'intera larghezza. Su schermi medi (tablet), occupa metà della larghezza, mentre su
+                    schermi grandi (desktop), occupa i due terzi.</p>
+                <p>Le media queries di Tailwind ci permettono di controllare il layout in base alla dimensione dello
+                    schermo, migliorando la responsività del design.</p>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 bg-gray-200 p-4 mt-4 sm:mt-0">
+                <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+                <p>Questa è la sidebar. Anche lei cambia dimensione in base alla larghezza dello schermo. Su schermi
+                    grandi, occupa un terzo della pagina, mentre su schermi piccoli e medi, si dispone sotto il
+                    contenuto principale o accanto a esso.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-blue-500 text-white p-4 mt-6 text-center">
+        © 2024 Responsive Layout, All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
