@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0)
@@ -18,6 +18,11 @@ const Counter = () => {
   const handleReset = () => {
     setCounter(0);
   }
+
+  useEffect(() => {
+    document.title = `Counter ${counter}`;
+  }, [counter]);
+
   return (
     <div>Count: {counter}
     <button onClick={handleClick}>ADD</button>
