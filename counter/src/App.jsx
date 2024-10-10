@@ -6,11 +6,19 @@ const Counter = () => {
   const handleClick = () => {
     setCounter((_counter) => {
     return _counter + 1;
-  })};
+  })
+}
+
+  const handleDecrement = () => {
+    setCounter((_counter) => {
+      return _counter - 1;
+    })
+  }
 
   return (
     <div>Count: {counter}
     <button onClick={handleClick}>ADD</button>
+    <button onClick={handleDecrement}>REMOVE</button>
     </div>
   )
 }
