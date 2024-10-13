@@ -14,8 +14,10 @@ const handleChangePassword = (e) => {
 
 const handleSubmit = () => {
   e.preventDefault();
-  console.log(username)
-  console.log(password)
+}
+
+const handleSend = () => {
+  alert (`L'utente ha le seguenti credenziali: ${username}, ${password}`);
 }
 
 return (
@@ -25,7 +27,7 @@ return (
       <input type="text" name="username" value={username} onChange={handleChangeUsername}/>
       <label>Password:</label>
       <input type="password" name="paswword" value={password} onChange={handleChangePassword}/>
-      <button type="submit">SEND</button>
+      <button type="submit" onClick={handleSend}>SEND</button>
     </form>
   </div>
 )
