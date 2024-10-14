@@ -1,13 +1,6 @@
 import React from "react";
-import { useRef } from "react";
 
 const Input = () => {
-
-    const inputRef = useRef(null);
-
-    const focusInput = () => {
-        inputRef.current.focus();
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,9 +14,9 @@ const Input = () => {
     return (
     <>
     <form onSubmit={handleSubmit}>
-        <input type="text" name="first_name" ref={inputRef} placeholder="Inserisci il testo"/>
-        <input type="text" name="last_name" ref={inputRef} placeholder="Inserisci il testo"/>
-        <button type="submit" onClick={focusInput}>Focus</button>
+        <input type="text" name="first_name"/>
+        <input type="text" name="last_name"/>
+        <button type="submit">SUBMIT</button>
     </form>
     </>
     )

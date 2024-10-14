@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import Input from "./input";
+import AlertInput from "./ref";
 
 const TextInput = () => {
 
@@ -20,6 +20,7 @@ const [input, setInput] = useState('');
     <br/>
     <br/>
     <Input />
+    <AlertInput />
     </>
   )
 }
