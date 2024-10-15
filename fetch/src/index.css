@@ -1,0 +1,18 @@
+table {
+    border: solid 2px rgb(16, 105, 5);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-style: oblique;
+    font-weight: 500;
+    padding: 2px 4px;
+    color: rgb(0, 0, 5);
+    background-color: rgb(235, 245, 243);
+}
+
+
+th {
+    border: solid 2px rgb(16, 105, 5);
+    color:rgb(17, 131, 72);
+    text-transform: uppercase;
+}
+
