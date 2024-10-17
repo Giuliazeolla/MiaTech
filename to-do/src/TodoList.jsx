@@ -1,31 +1,34 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import useFilteredTodos from "./hooks/useFilteredTodos";
 
-
-const TodoList = () => {
-  const [todos] = useState([
-    'Comprare latte',
-    'Studiare',
-    'Leggere',
-    'Pulire cucina'
-  ]);
-
-  const [searchTerm, setSarchTerm] = useState('');
-  const filteredTodos = useFilteredTodos(todos, searchTerm);
+const ToDoList = () => {
+    const [todos] = useState([
+        'Comprare latte',
+        'pulire cucina',
+        'Fare Spesa',
+        'leggere un Libro'
+    ]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const todosFiltered = useFilteredTodos(todos, searchTerm);
 
 
-  return (
-    <div>
-      <input type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={e => setSarchTerm(e.target.value)} />
-      <ul>
-        {
-          todos && todos.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))
-        }
-      </ul>
-    </div>
-  )
+    const handleSearchTerm = useCallback((e) => {
+        setSearchTerm(e.target.value);
+    }, []);
+
+
+    return (
+        <div>
+            <input type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={handleSearchTerm} />
+            <ul>
+                {todosFiltered.map((todo, index) => (
+                    <li key={index}>{todo}</li>
+                ))
+                }
+            </ul>
+        </div>
+    )
 }
 
-export default TodoList;
+
+export default ToDoList;

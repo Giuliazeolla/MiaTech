@@ -10,11 +10,10 @@ const useFilteredTodos = (todos, searchTerm) => {
       const filtered = todos.filter(todo => 
         todo.toLowerCase().includes(lowercasedSearchTerm)
       );
-  
       setFilteredTodos(filtered);
-
-      console.log(searchTerm);
     }, [todos, searchTerm]);
+
+    return filteredTodos;
 }
 
 export default useFilteredTodos;
