@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useFilteredTodos from "./hooks/useFilteredTodos";
 
 const ToDoList = () => {
@@ -9,6 +9,12 @@ const ToDoList = () => {
         'leggere un Libro'
     ]);
     const [searchTerm, setSearchTerm] = useState('');
+    const searchInputRef = useRef(null);
+
+    useEffect(() => {
+        searchInputRef.current.focus();
+    }, []);
+
     const todosFiltered =useMemo(() => {
         return todos.filter(todo => 
             todo.toLowerCase().includes(searchTerm.toLowerCase())
@@ -23,7 +29,7 @@ const ToDoList = () => {
 
     return (
         <div>
-            <input type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={handleSearchTerm} />
+            <input ref={searchInputRef} type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={handleSearchTerm} />
             <ul>
                 {todosFiltered.map((todo, index) => (
                     <li key={index}>{todo}</li>
