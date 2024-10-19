@@ -1,44 +1,40 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import useFilteredTodos from "./hooks/useFilteredTodos";
+import { useContext, useState } from "react";
+import { TodoContext } from "./provider/TodoProvider";
 
-const ToDoList = () => {
-    const [todos] = useState([
-        'Comprare latte',
-        'pulire cucina',
-        'Fare Spesa',
-        'leggere un Libro'
-    ]);
+const TodoList = () => {
+    const { todos, addTodo }  = useContext(TodoContext);
+
     const [searchTerm, setSearchTerm] = useState('');
-    const searchInputRef = useRef(null);
 
-    useEffect(() => {
-        searchInputRef.current.focus();
-    }, []);
+    const filteredTodos = todos.filter(todo =>
+        todo.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
-    const todosFiltered =useMemo(() => {
-        return todos.filter(todo => 
-            todo.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-    }, [todos, searchTerm]);
-
-
-    const handleSearchTerm = useCallback((e) => {
+    const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
-    }, []);
+    }
 
+    const handleAddTodo = () => {
+        const newTodo = prompt('Inserisci un nuovo to-do:');
+        if (newTodo) {
+            addTodo(newTodo);
+        }
+    };
 
     return (
         <div>
-            <input ref={searchInputRef} type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={handleSearchTerm} />
+            <input type="text" placeholder="Cerca to-do..." value={searchTerm} onChange={handleSearchChange} />
             <ul>
-                {todosFiltered.map((todo, index) => (
-                    <li key={index}>{todo}</li>
-                ))
+                {
+                    filteredTodos.map((todo, index) => (
+                        <li key={index}>{todo}</li>
+                    ))
                 }
             </ul>
+            <button onClick={handleAddTodo}>Aggiungi To-Do</button>
         </div>
     )
 }
 
 
-export default ToDoList;
+export default TodoList;
