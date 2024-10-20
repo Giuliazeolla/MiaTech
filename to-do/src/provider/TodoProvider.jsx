@@ -12,11 +12,15 @@ export const TodoProvider = ({ children }) => {
     ]);
 
     const addTodo = (newTodo) => {
-        setTodos(prevTodos => [...prevTodos, newTodo]);
+        setTodos([...todos, newTodo]);
+    };
+
+    const removeTodo = (todoToRemove) => {
+        setTodos(todos.filter((todo) => todo !== todoToRemove));
     };
 
     return (
-        <TodoContext.Provider value={{ todos, addTodo }}>
+        <TodoContext.Provider value={{ todos, addTodo, removeTodo }}>
             {children}
         </TodoContext.Provider>
     );
