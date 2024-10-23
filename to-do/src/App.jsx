@@ -1,16 +1,29 @@
 import React from "react";
 import TodoList from "./TodoList";
-import TodoProvider from "./provider/TodoProvider";
+import { SelectLanguage, useLanguage } from "./hooks/useLanguage";
+import { SelectCurrency, useCurrency } from "./hooks/useCurrency";
 
 const App = () => {
+    const [lang, setLang] = useLanguage();
+    const [currency, setCurrency] = useCurrency();
+
     return (
         <>
-        <TodoProvider>
             <div>
-                <h2>Lista To-Do</h2>
+                <SelectLanguage lang={lang} setLang={setLang}/>
+                <SelectCurrency currency={currency} setCurrency={setCurrency}/>
+                <h2>    
+                    {
+                        lang == 'it' ? 'Lista to-do' : 'Todo list'
+                    }
+                </h2>
+                <p>
+                    {
+                        currency == 'USD' ? '$100' : '€90'
+                    }
+                </p>
                 <TodoList />
             </div>
-        </TodoProvider>
         </>
     );
 }
