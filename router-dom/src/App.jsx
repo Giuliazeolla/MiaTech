@@ -1,21 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./components/Layout";
-import TodoDetail from "./pages/TodoDetail";
+import TodoList from "./pages/TodoList"
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-        <Route index element={<Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="todos/:id" element={<TodoDetail />}/>
-        </Route>
-      </Routes>
-    </Router>
+    <>
+    <TodoList />
+    </>
   )
 };
 
