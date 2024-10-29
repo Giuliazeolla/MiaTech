@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addTodo, removeTodo } from "../slices/todoSlice";
+import { addTodo, removeTodo, toggleTodo } from "../slices/todoSlice";
+import { useState } from "react";
 
 const TodoList = () => {
+    const [input, setInput] = useState('');
     const todos = useSelector((state) => state.todos);
     const dispatch = useDispatch();
 
@@ -12,6 +14,11 @@ const TodoList = () => {
     const handleAdd = (todo) => {
         const newTodo = { id: Math.random(), title: "Nuovo to-do" }
         dispatch(addTodo(newTodo));
+    };
+
+    const handleToggle = (e, todoText, id) => {
+            setInput(e.target.value);
+            dispatch(toggleTodo(todoText, id));
     }
 
     return (
@@ -23,7 +30,12 @@ const TodoList = () => {
                     todos.map((todo) => (
                         <li key={todo.id}>
                             {todo.title}
-                            <button onClick={() => handleRemove(todo.id)}>Rimuovi to-do</button>
+                            <button onClick={() => handleRemove(todo.id)}></button>
+                            <button>
+                                {
+                                    todo.completed ? 'Completato' : <input type="text" placeholder="Completa" onChange={(e) => handleToggle(e, todo.id, todo.title)} />
+                                }
+                            </button>
                         </li>
                     ))
                 }
