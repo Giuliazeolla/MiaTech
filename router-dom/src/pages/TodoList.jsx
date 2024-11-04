@@ -30,7 +30,7 @@ const TodoList = () => {
                     todos.map((todo) => (
                         <li key={todo.id}>
                             {todo.title}
-                            <button onClick={() => handleRemove(todo.id)}></button>
+                            <button onClick={() => handleRemove(todo.id)}>Rimuovi to-do</button>
                             <button>
                                 {
                                     todo.completed ? 'Completato' : <input type="text" placeholder="Completa" onChange={(e) => handleToggle(e, todo.id, todo.title)} />
