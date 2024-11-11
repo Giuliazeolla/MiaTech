@@ -26,4 +26,8 @@ function assignTodoToUser(todoId: number, userId: number): boolean {
         return true;
     };
     return false;
-}
+};
+
+function getUserTodos(userId: number): Todo[] {
+    return todos.filter((todo) => todo.userId === userId);
+};
