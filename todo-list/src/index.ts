@@ -1,9 +1,10 @@
 const greeting: string = "Hello Typescript!";
 console.log(greeting);
 
-import { Todo } from './types';
+import { Todo, User } from './types';
 
 const todos: Todo[] = [];
+const users: User[] = [];
 
 function addTodo(title: string): Todo {
     const newTodo: Todo = {
@@ -13,4 +14,16 @@ function addTodo(title: string): Todo {
     }
     todos.push(newTodo);
     return newTodo;
+};
+
+function assignTodoToUser(todoId: number, userId: number): boolean {
+    const todo = todos.find((t) => t.id === todoId);
+    const user = users.find((u) => u.id === userId);
+
+
+    if (todo && user) {
+        todo.userId = userId;
+        return true;
+    };
+    return false;
 }
