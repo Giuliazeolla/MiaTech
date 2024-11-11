@@ -1,59 +1,56 @@
-const greeting: string = "Hello Typescript!";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const greeting = "Hello Typescript!";
 console.log(greeting);
-
-import { Todo, User, TodoWithMetadata } from './types';
-
-const todos: Todo[] = [];
-const users: User[] = [];
-const metadata: TodoWithMetadata[] = [];
-
-function addTodo(title: string, metadata?: string | object): TodoWithMetadata {
-    const newTodo: TodoWithMetadata = {
+const todos = [];
+const users = [];
+const metadata = [];
+function addTodo(title, metadata) {
+    const newTodo = {
         id: todos.length + 1,
         title,
         completed: false,
         metadata
-    }
+    };
     todos.push(newTodo);
     return newTodo;
-};
-
-function assignTodoToUser(todoId: number, userId: number): boolean {
+}
+;
+function assignTodoToUser(todoId, userId) {
     const todo = todos.find((t) => t.id === todoId);
     const user = users.find((u) => u.id === userId);
-
     if (todo && user) {
         todo.userId = userId;
         return true;
-    };
+    }
+    ;
     return false;
-};
-
-function getUserTodos(userId: number): Todo[] {
+}
+;
+function getUserTodos(userId) {
     return todos.filter((todo) => todo.userId === userId);
-};
-
-function parseInput(input: unknown): string {
+}
+;
+function parseInput(input) {
     if (typeof input === "string") {
         return input;
-    } else if (typeof input === "number") {
+    }
+    else if (typeof input === "number") {
         return input.toString();
-    } else {
+    }
+    else {
         error("Input di tipo non valido");
     }
 }
-
-function updateTodo(id: number, updates: Partial<Todo>): Todo | undefined {
+function updateTodo(id, updates) {
     const index = todos.findIndex(todo => todo.id === id);
-
     if (index === -1) {
         console.error(`Todo con id ${id} non trovato.`);
         return undefined;
     }
-    todos[index] = { ...todos[index], ...updates };
+    todos[index] = Object.assign(Object.assign({}, todos[index]), updates);
     return todos[index];
 }
-
-function error(message: string): never {
+function error(message) {
     throw new Error(message);
 }

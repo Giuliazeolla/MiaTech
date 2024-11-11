@@ -3,11 +3,10 @@ export interface Todo {
     title: string;
     completed: boolean;
     userId?: number;
-    metadata?: string | object;
 }
 
 export interface TodoWithMetadata extends Todo {
-    metadata: string | object;
+    metadata?: string | object;
 }
 
 export interface User {
