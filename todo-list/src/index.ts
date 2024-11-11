@@ -32,6 +32,16 @@ function getUserTodos(userId: number): Todo[] {
     return todos.filter((todo) => todo.userId === userId);
 };
 
+function parseInput(input: unknown): string {
+    if (typeof input === "string") {
+        return input;
+    } else if (typeof input === "number") {
+        return input.toString();
+    } else {
+        error("Input di tipo non valido");
+    }
+}
+
 function error(message: string): never {
     throw new Error(message);
 }
