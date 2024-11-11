@@ -1,15 +1,15 @@
 const greeting: string = "Hello Typescript!";
 console.log(greeting);
 
-import { Todo, User } from './types';
+import { Todo, User, TodoWithMetadata } from './types';
 
 const todos: Todo[] = [];
 const users: User[] = [];
 
-function addTodo(title: string, metadata?: any): Todo {
+function addTodo(title: string, metadata?: string | object): Todo {
     const newTodo: Todo = {
         id: todos.length + 1,
-        title: title,
+        title,
         completed: false,
         metadata
     }
