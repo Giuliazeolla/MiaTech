@@ -1,7 +1,7 @@
 const greeting: string = "Hello Typescript!";
 console.log(greeting);
 
-import { Todo, User, TodoWithMetadata } from './types';
+import { Todo, User, TodoWithMetadata, Project } from './types';
 
 const todos: Todo[] = [];
 const users: User[] = [];
@@ -61,4 +61,13 @@ function error(message: string): never {
 function getTodoSummary(todo: Todo): [string, boolean] {
     return [todo.title, todo.completed]
 }
+
+function createProject(id: number, name: string, users: User[], todos: Todo[]): Project {
+    return {
+        id,
+        name,
+        users,
+        todos
+    };
+};
 
