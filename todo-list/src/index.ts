@@ -57,3 +57,4 @@ function updateTodo(id: number, updates: Partial<Todo>): Todo | undefined {
 function error(message: string): never {
     throw new Error(message);
 }
+
