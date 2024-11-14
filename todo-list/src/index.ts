@@ -1,7 +1,7 @@
 const greeting: string = "Hello Typescript!";
 console.log(greeting);
 
-import { Todo, User, TodoWithMetadata, Project } from './types';
+import { Todo, User, TodoWithMetadata, Project, TodoStatus } from './types';
 
 const todos: Todo[] = [];
 const users: User[] = [];
@@ -12,11 +12,15 @@ function addTodo(title: string, metadata?: string | object): TodoWithMetadata {
         id: todos.length + 1,
         title,
         completed: false,
-        metadata
+        metadata,
+        status: TodoStatus.Pending,
     }
     todos.push(newTodo);
     return newTodo;
 };
+
+const add = addTodo("Learn Typescript", {});
+console.log(add);
 
 function assignTodoToUser(todoId: number, userId: number): boolean {
     const todo = todos.find((t) => t.id === todoId);
@@ -29,9 +33,15 @@ function assignTodoToUser(todoId: number, userId: number): boolean {
     return false;
 };
 
+const assign = assignTodoToUser(2, 3);
+console.log(assign);
+
 function getUserTodos(userId: number): Todo[] {
     return todos.filter((todo) => todo.userId === userId);
 };
+
+const getUser = getUserTodos(2);
+console.log(getUser);
 
 function parseInput(input: unknown): string {
     if (typeof input === "string") {
@@ -43,15 +53,21 @@ function parseInput(input: unknown): string {
     }
 }
 
-function updateTodo(id: number, updates: Partial<Todo>): Todo | undefined {
-    const index = todos.findIndex(todo => todo.id === id);
+const parse = parseInput("unknown");
+console.log(parse);
 
-    if (index === -1) {
-        console.error(`Todo con id ${id} non trovato.`);
-        return undefined;
-    }
-    todos[index] = { ...todos[index], ...updates };
-    return todos[index];
+function updateTodo(todo: Todo, updates: Partial<Todo>): Todo {
+   if (updates.title !== undefined) {
+    todo.title = updates.title;
+   };
+   if (updates.completed !== undefined) {
+    todo.completed = updates.completed;
+   };
+   if (updates.userId !== undefined) {
+    todo.userId = updates.userId;
+   };
+
+   return todo;
 }
 
 function error(message: string): never {
@@ -70,4 +86,6 @@ function createProject(id: number, name: string, users: User[], todos: Todo[]): 
         todos
     };
 };
+
+
 
