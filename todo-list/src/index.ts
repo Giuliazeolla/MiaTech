@@ -58,3 +58,7 @@ function error(message: string): never {
     throw new Error(message);
 }
 
+function getTodoSummary(todo: Todo): [string, boolean] {
+    return [todo.title, todo.completed]
+}
+
