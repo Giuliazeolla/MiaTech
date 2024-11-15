@@ -1,22 +1,15 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var greeting = "Hello Typescript!";
 console.log(greeting);
 var types_1 = require("./types");
-var todos = [];
+var todos = [
+    { id: 1, title: "Todo", completed: false, status: types_1.TodoStatus.InProgress },
+    { id: 2, title: "Todo", completed: true, status: types_1.TodoStatus.Completed },
+];
 var users = [];
 var metadata = [];
+var todoStatus = [];
 function addTodo(title, metadata) {
     var newTodo = {
         id: todos.length + 1,
@@ -63,14 +56,20 @@ function parseInput(input) {
 }
 var parse = parseInput("unknown");
 console.log(parse);
-function updateTodo(id, updates) {
-    var index = todos.findIndex(function (todo) { return todo.id === id; });
-    if (index === -1) {
-        console.error("Todo con id ".concat(id, " non trovato."));
-        return undefined;
+function updateTodo(todo, updates) {
+    if (updates.title !== undefined) {
+        todo.title = updates.title;
     }
-    todos[index] = __assign(__assign({}, todos[index]), updates);
-    return todos[index];
+    ;
+    if (updates.completed !== undefined) {
+        todo.completed = updates.completed;
+    }
+    ;
+    if (updates.userId !== undefined) {
+        todo.userId = updates.userId;
+    }
+    ;
+    return todo;
 }
 function error(message) {
     throw new Error(message);
@@ -87,3 +86,15 @@ function createProject(id, name, users, todos) {
     };
 }
 ;
+function updateTodoStatus(todoId, status) {
+    var todo = todos.find(function (t) { return t.id === todoId; });
+    if (!todo) {
+        throw new Error("Todo with Id ".concat(todoId, " not found"));
+    }
+    else {
+        todo.status = status;
+        console.log("Todo with Id ".concat(todoId, " update to status: ").concat(status));
+    }
+}
+var todosStatus = updateTodoStatus(2, types_1.TodoStatus.Completed);
+console.log(todosStatus);

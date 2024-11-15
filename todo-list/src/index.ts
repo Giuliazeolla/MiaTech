@@ -3,9 +3,13 @@ console.log(greeting);
 
 import { Todo, User, TodoWithMetadata, Project, TodoStatus } from './types';
 
-const todos: Todo[] = [];
+const todos: Todo[] = [
+    {id: 1, title:"Todo", completed: false, status: TodoStatus.InProgress},
+    {id: 2, title:"Todo", completed: true, status: TodoStatus.Completed},
+];
 const users: User[] = [];
 const metadata: TodoWithMetadata[] = [];
+const todoStatus: TodoStatus[] = [];
 
 function addTodo(title: string, metadata?: string | object): TodoWithMetadata {
     const newTodo: TodoWithMetadata = {
@@ -57,17 +61,17 @@ const parse = parseInput("unknown");
 console.log(parse);
 
 function updateTodo(todo: Todo, updates: Partial<Todo>): Todo {
-   if (updates.title !== undefined) {
-    todo.title = updates.title;
-   };
-   if (updates.completed !== undefined) {
-    todo.completed = updates.completed;
-   };
-   if (updates.userId !== undefined) {
-    todo.userId = updates.userId;
-   };
+    if (updates.title !== undefined) {
+        todo.title = updates.title;
+    };
+    if (updates.completed !== undefined) {
+        todo.completed = updates.completed;
+    };
+    if (updates.userId !== undefined) {
+        todo.userId = updates.userId;
+    };
 
-   return todo;
+    return todo;
 }
 
 function error(message: string): never {
@@ -87,5 +91,16 @@ function createProject(id: number, name: string, users: User[], todos: Todo[]): 
     };
 };
 
+function updateTodoStatus(todoId: number, status: TodoStatus): void {
+    const todo = todos.find((t) => t.id === todoId);
 
+    if (!todo) {
+        throw new Error(`Todo with Id ${todoId} not found`);
+    } else {
+        todo.status = status;
+        console.log(`Todo with Id ${todoId} update to status: ${status}`);
+    }
+}
 
+const todosStatus = updateTodoStatus(2, TodoStatus.Completed);
+console.log(todosStatus);
