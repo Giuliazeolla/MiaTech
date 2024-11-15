@@ -115,3 +115,19 @@ const TODO: Todo = {
 }
 utente.addTodo(TODO)
 console.log(utente.todos);
+
+const user1 = new Utente(4, "Giulia", 'giuliazeolla23@gmail.com')
+const user2 = new Utente(5, "Marco", 'Marcopolli_7@gmail.com')
+const user3 = new Utente(6, "Jacopo", 'jacopo-bianchi_3@gmail.com')
+
+const todo1: Todo = {id: 12, title: "Title1", completed: false, status: TodoStatus.InProgress}
+const todo2: Todo = {id: 13, title: "Title2", completed: true, status: TodoStatus.Completed}
+const todo3: Todo = {id: 14, title: "Title3", completed: false, status: TodoStatus.Pending}
+const todo4: Todo = {id: 15, title: "Title4", completed: true, status: TodoStatus.Completed}
+
+user1.addTodo(todo2);
+user1.addTodo(todo3);
+user2.addTodo(todo1);
+user3.addTodo(todo4);
+
+console.log(user3);

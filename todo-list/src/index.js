@@ -108,3 +108,15 @@ var TODO = {
 };
 utente.addTodo(TODO);
 console.log(utente.todos);
+var user1 = new Utente_1.Utente(4, "Giulia", 'giuliazeolla23@gmail.com');
+var user2 = new Utente_1.Utente(5, "Marco", 'Marcopolli_7@gmail.com');
+var user3 = new Utente_1.Utente(6, "Jacopo", 'jacopo-bianchi_3@gmail.com');
+var todo1 = { id: 12, title: "Title1", completed: false, status: types_1.TodoStatus.InProgress };
+var todo2 = { id: 13, title: "Title2", completed: true, status: types_1.TodoStatus.Completed };
+var todo3 = { id: 14, title: "Title3", completed: false, status: types_1.TodoStatus.Pending };
+var todo4 = { id: 15, title: "Title4", completed: true, status: types_1.TodoStatus.Completed };
+user1.addTodo(todo2);
+user1.addTodo(todo3);
+user2.addTodo(todo1);
+user3.addTodo(todo4);
+console.log(user3);
