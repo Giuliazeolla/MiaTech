@@ -2,6 +2,7 @@ const greeting: string = "Hello Typescript!";
 console.log(greeting);
 
 import { Todo, User, TodoWithMetadata, Project, TodoStatus } from './types';
+import { Utente } from './Utente';
 
 const todos: Todo[] = [
     {id: 1, title:"Todo", completed: false, status: TodoStatus.InProgress},
@@ -104,3 +105,13 @@ function updateTodoStatus(todoId: number, status: TodoStatus): void {
 
 const todosStatus = updateTodoStatus(2, TodoStatus.Completed);
 console.log(todosStatus);
+
+const utente = new Utente(1, "Giulia", 'giuliazeolla@gmail.com');
+const TODO: Todo = {
+    id: 3,
+    title: "TITLE",
+    completed: false,
+    status: TodoStatus.Pending,
+}
+utente.addTodo(TODO)
+console.log(utente.todos);

@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var greeting = "Hello Typescript!";
 console.log(greeting);
 var types_1 = require("./types");
+var Utente_1 = require("./Utente");
 var todos = [
     { id: 1, title: "Todo", completed: false, status: types_1.TodoStatus.InProgress },
     { id: 2, title: "Todo", completed: true, status: types_1.TodoStatus.Completed },
@@ -98,3 +99,12 @@ function updateTodoStatus(todoId, status) {
 }
 var todosStatus = updateTodoStatus(2, types_1.TodoStatus.Completed);
 console.log(todosStatus);
+var utente = new Utente_1.Utente(1, "Giulia", 'giuliazeolla@gmail.com');
+var TODO = {
+    id: 3,
+    title: "TITLE",
+    completed: false,
+    status: types_1.TodoStatus.Pending,
+};
+utente.addTodo(TODO);
+console.log(utente.todos);
