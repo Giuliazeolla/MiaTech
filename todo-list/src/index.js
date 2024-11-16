@@ -1,9 +1,10 @@
 "use strict";
+/*const greeting: string = "Hello Typescript!";
+console.log(greeting);*/
 Object.defineProperty(exports, "__esModule", { value: true });
-var greeting = "Hello Typescript!";
-console.log(greeting);
 var types_1 = require("./types");
 var Utente_1 = require("./Utente");
+var utils_1 = require("./utils");
 var todos = [
     { id: 1, title: "Todo", completed: false, status: types_1.TodoStatus.InProgress },
     { id: 2, title: "Todo", completed: true, status: types_1.TodoStatus.Completed },
@@ -120,3 +121,6 @@ user1.addTodo(todo3);
 user2.addTodo(todo1);
 user3.addTodo(todo4);
 console.log(user3);
+var isCompleted = function (todo) { return todo.completed; };
+var completedTodos = (0, utils_1.filterTodos)(todos, isCompleted);
+console.log(completedTodos);

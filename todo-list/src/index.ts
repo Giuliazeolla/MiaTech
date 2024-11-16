@@ -1,8 +1,9 @@
-const greeting: string = "Hello Typescript!";
-console.log(greeting);
+/*const greeting: string = "Hello Typescript!";
+console.log(greeting);*/
 
 import { Todo, User, TodoWithMetadata, Project, TodoStatus } from './types';
 import { Utente } from './Utente';
+import { filterTodos } from './utils';
 
 const todos: Todo[] = [
     {id: 1, title:"Todo", completed: false, status: TodoStatus.InProgress},
@@ -131,3 +132,7 @@ user2.addTodo(todo1);
 user3.addTodo(todo4);
 
 console.log(user3);
+
+const isCompleted = (todo: Todo) => todo.completed;
+const completedTodos = filterTodos(todos, isCompleted);
+console.log(completedTodos)
