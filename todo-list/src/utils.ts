@@ -13,3 +13,13 @@ export function updatePartialTodo(
 ): Todo[] {
     return todos.map(todo => todo.id === todoId ? { ...todo, ...partialTodo } : todo)
 };
+
+
+export type TodoRecord = Record<number, Todo>;
+
+export function convertArrayToRecord(todos: Todo[]): TodoRecord {
+    return todos.reduce((record, todo) => {
+        record[todo.id] = todo;
+        return record;
+    }, {} as TodoRecord);
+}

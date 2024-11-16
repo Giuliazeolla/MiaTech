@@ -127,3 +127,5 @@ console.log(completedTodos);
 var partialTodo = { title: "Learn Typescript", completed: true };
 var updateTodos = (0, utils_1.updatePartialTodo)(todos, 1, partialTodo);
 console.log(updateTodos);
+var todoRecord = (0, utils_1.convertArrayToRecord)(todos);
+console.log(todoRecord);

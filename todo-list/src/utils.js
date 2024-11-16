@@ -13,6 +13,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.filterTodos = filterTodos;
 exports.updatePartialTodo = updatePartialTodo;
+exports.convertArrayToRecord = convertArrayToRecord;
 function filterTodos(todos, filterFn) {
     return todos.filter(filterFn);
 }
@@ -20,3 +21,9 @@ function updatePartialTodo(todos, todoId, partialTodo) {
     return todos.map(function (todo) { return todo.id === todoId ? __assign(__assign({}, todo), partialTodo) : todo; });
 }
 ;
+function convertArrayToRecord(todos) {
+    return todos.reduce(function (record, todo) {
+        record[todo.id] = todo;
+        return record;
+    }, {});
+}
