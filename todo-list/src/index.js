@@ -124,3 +124,6 @@ console.log(user3);
 var isCompleted = function (todo) { return todo.completed; };
 var completedTodos = (0, utils_1.filterTodos)(todos, isCompleted);
 console.log(completedTodos);
+var partialTodo = { title: "Learn Typescript", completed: true };
+var updateTodos = (0, utils_1.updatePartialTodo)(todos, 1, partialTodo);
+console.log(updateTodos);

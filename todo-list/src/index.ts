@@ -3,7 +3,7 @@ console.log(greeting);*/
 
 import { Todo, User, TodoWithMetadata, Project, TodoStatus } from './types';
 import { Utente } from './Utente';
-import { filterTodos } from './utils';
+import { filterTodos, updatePartialTodo } from './utils';
 
 const todos: Todo[] = [
     {id: 1, title:"Todo", completed: false, status: TodoStatus.InProgress},
@@ -136,3 +136,7 @@ console.log(user3);
 const isCompleted = (todo: Todo) => todo.completed;
 const completedTodos = filterTodos(todos, isCompleted);
 console.log(completedTodos)
+
+const partialTodo = { title: "Learn Typescript", completed: true };
+const updateTodos = updatePartialTodo(todos, 1, partialTodo);
+console.log(updateTodos);
