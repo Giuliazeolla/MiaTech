@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { addTodo, removeTodo, toggleTodo } from "../slices/todoSlice";
 import { useState } from "react";
 
+
 const TodoList = () => {
     const [input, setInput] = useState('');
     const todos = useSelector((state) => state.todos);
@@ -31,6 +32,7 @@ const TodoList = () => {
                         <li key={todo.id}>
                             {todo.title}
                             <button onClick={() => handleRemove(todo.id)}>Rimuovi to-do</button>
+                            <></>
                             <button>
                                 {
                                     todo.completed ? 'Completato' : <input type="text" placeholder="Completa" onChange={(e) => handleToggle(e, todo.id, todo.title)} />
