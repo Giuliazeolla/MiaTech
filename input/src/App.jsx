@@ -1,32 +1,18 @@
-import React, { useState } from "react";
-import Input from "./input";
-import AlertInput from "./ref";
-import List from "./list";
+import React, { useRef } from "react";
 
 const TextInput = () => {
 
-  const [input, setInput] = useState('');
-  const items = ['Elemento1', 'Elemento2', 'Elemento3', 'Elemento4'];
+  const inputRef = useRef();
 
-  const handleChange = (event) => {
-    setInput(event.target.value);
+  const handleClick = () => {
+    alert(inputRef.current.value);
   }
-  //console.log(input);
 
   return (
     <>
-      <div>
         <label>Digita qui...</label>
-        <input type="text" name="text" value={input} onChange={handleChange} />
-      </div>
-      <br />
-      <br />
-      <Input />
-      <AlertInput />
-      <div>
-        <h1>Lista degli elementi:</h1>
-        <List items= {items} />
-      </div>
+        <input ref={inputRef} type="text" placeholder="digita qui..." />
+        <button onClick={handleClick}>Click</button>
     </>
   )
 }
